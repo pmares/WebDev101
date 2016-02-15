@@ -1,0 +1,95 @@
+a img, a svg {
+  vertical-align: middle;
+}
+
+.wrap {
+   margin: auto;
+   width: 1180px;
+   overflow: hidden; /* because children will be floated */
+}
+
+
+.about {
+  margin: auto;
+  text-align: left;
+}
+
+.logo.small {
+  width: 100px;
+}
+
+body {
+    background-image: -webkit-gradient(
+        radial,
+        50% 50%, 0,
+        50% 50%, 1000,
+        from(rgba(245,245,245,1)),
+        to(rgba(157, 198, 240,1))
+    );
+}
+
+#slides {
+    width: 999999px;
+}
+
+#slides > div {
+  height: 600px;
+  width: 1180px;
+  float: left;
+
+  /* Flexible Box Model */
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+
+  display: box;
+  box-align: center;
+  box-orient: horizontal;
+  box-pack: center;
+}
+
+#slides > article {
+  height: 600px;
+  width: 1180px;
+  float: left;
+  text-align: left;
+
+  /* Flexible Box Model */
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+
+  display: box;
+  box-align: center;
+  box-orient: horizontal;
+  box-pack: center;
+}
+
+nav {
+  margin: auto;
+  width: 20%;
+  text-align: center;
+}
+
+img.logo {
+  width: 25px;
+}
+
+.img.right {
+  float: right;
+  margin: 20px;
+}
+
+
+code {
+    text-align: left;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+    font-family: monospace,monospace;
+}
