@@ -1,25 +1,18 @@
 var Slides = {
   container : $('#slides'),
-  totalSlides : '',
-  translateAmount : 0,
+  totalSlides : 0,
   currentSlide : 1,
-  slideWidth : '',
   previousSlide: $('#previous-slide'),
   nextSlide: $('#next-slide'),
 
-
   init : function(totalSlides) {
-    var each;
 
     if ( !totalSlides ) throw new Error('Please pass the total number of slides.');
-    Slides.totalSlides = totalSlides;
 
+    Slides.totalSlides = totalSlides;
     Slides.loadContent();
 
-    each = Slides.container.children('div');
-
-    // Determine the width of our canvas
-    Slides.slideWidth = each.width() + ( parseInt( each.css('margin-right'), 10 ) );
+    var each = Slides.container.children('div');
 
     Slides.keyPress();
     Slides.buttonClick();
@@ -27,8 +20,9 @@ var Slides = {
     if (location.hash) {
       Slides.setSlideFromHash();
       Slides.updateHash( Slides.currentSlide );
-      Slides.animate();
     }
+
+    Slides.animate();
 
   },
 
@@ -47,11 +41,16 @@ var Slides = {
 
   loadContent : function() {
     Slides.container.hide();
-    for ( var i = 1; i < Slides.totalSlides; i++ ) {
-      $('<div id="#slide-' + Slides.pad(i, 3) + '"></div>')
-        .load('slides/' + Slides.pad(i, 3) + '.html')
-        .appendTo(Slides.container);
+
+    for ( var i = 1; i <= Slides.totalSlides; i++ ) {
+      var slide_number = Slides.pad(i, 3);
+      var slide_file = 'slides/' +  slide_number + '.html'
+      var slide = $('<div class="slide" id="slide-' + slide_number + '"></div>')
+        .load(slide_file);
+      slide.appendTo(Slides.container);
+      slide.hide();
     }
+
     Slides.container.show();
   },
 
@@ -76,32 +75,28 @@ var Slides = {
   },
 
   next : function( ) {
-    Slides.translateAmount -= Slides.slideWidth;
+    if ( Slides.currentSlide >= Slides.totalSlides) return;
     Slides.updateHash( ++Slides.currentSlide );
     Slides.animate();
   },
 
   prev : function() {
-    // No more left to go back.
-    if ( Slides.translateAmount === 0 ) return;
-
-    Slides.translateAmount += Slides.slideWidth;
+    if ( Slides.currentSlide <= 1 ) return;
     Slides.updateHash( --Slides.currentSlide );
     Slides.animate();
   },
 
   animate : function() {
-    Slides
-    .container
-    .children()
-       .css( '-webkit-transform', 'translateX(' + Slides.translateAmount + 'px)' );
+    $('.slide').hide();
+    var slide_number = Slides.pad(Slides.currentSlide, 3);
+    $('#slide-' + slide_number).show();
   },
 
-  updateHash : function( direction ) {
+  updateHash : function(slideNumber) {
     // Update current Slides and hash.
-    location.hash = '#slide-' + Slides.pad(Slides.currentSlide,3);
+    location.hash = '#slide-' + Slides.pad(slideNumber, 3);
   }
 };
 
   // All right; let's do this.
-Slides.init(10);
+Slides.init(12);

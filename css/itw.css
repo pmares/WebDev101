@@ -28,14 +28,9 @@ body {
     );
 }
 
-#slides {
-    width: 999999px;
-}
 
 #slides > div {
-  height: 600px;
-  width: 1180px;
-  float: left;
+  margin: auto;
 
   /* Flexible Box Model */
   display: -webkit-box;
@@ -50,8 +45,6 @@ body {
 }
 
 #slides > article {
-  height: 600px;
-  width: 1180px;
   float: left;
   text-align: left;
 
