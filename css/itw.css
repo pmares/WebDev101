@@ -2,20 +2,36 @@ a img, a svg {
   vertical-align: middle;
 }
 
-.wrap {
-   margin: auto;
-   width: 1180px;
-   overflow: hidden; /* because children will be floated */
+h1 {
+  text-align: center;
 }
 
+.center {
+  text-align: center;
+}
 
-.about {
-  margin: auto;
-  text-align: left;
+.two-column {
+  display: inline-block;
+  margin: 10px;
+
+}
+.logo {
+  width: 25px;
 }
 
 .logo.small {
   width: 100px;
+}
+
+nav {
+  margin: auto;
+  width: 20%;
+  text-align: center;
+}
+
+.img.right {
+  float: right;
+  margin: 20px;
 }
 
 body {
@@ -28,53 +44,10 @@ body {
     );
 }
 
-
-#slides > div {
+#slides {
+  width: 50em;
   margin: auto;
-
-  /* Flexible Box Model */
-  display: -webkit-box;
-  -webkit-box-align: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-pack: center;
-
-  display: box;
-  box-align: center;
-  box-orient: horizontal;
-  box-pack: center;
 }
-
-#slides > article {
-  float: left;
-  text-align: left;
-
-  /* Flexible Box Model */
-  display: -webkit-box;
-  -webkit-box-align: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-pack: center;
-
-  display: box;
-  box-align: center;
-  box-orient: horizontal;
-  box-pack: center;
-}
-
-nav {
-  margin: auto;
-  width: 20%;
-  text-align: center;
-}
-
-img.logo {
-  width: 25px;
-}
-
-.img.right {
-  float: right;
-  margin: 20px;
-}
-
 
 code {
     text-align: left;
