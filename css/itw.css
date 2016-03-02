@@ -12,7 +12,8 @@ h1 {
 
 .two-column {
   display: inline-block;
-  margin: 10px;
+  margin: 1%;
+  width: 47%;
 
 }
 .logo {
@@ -45,7 +46,7 @@ body {
 }
 
 #slides {
-  width: 50em;
+  width: 55em;
   margin: auto;
 }
 
