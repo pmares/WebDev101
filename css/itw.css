@@ -2,6 +2,10 @@ a img, a svg {
   vertical-align: middle;
 }
 
+.clearcss {
+  text-align: initial;
+}
+
 h1 {
   text-align: center;
 }
@@ -60,3 +64,55 @@ code {
     border-radius: 0;
     font-family: monospace,monospace;
 }
+
+
+.green-bar-wrapper {
+  background: #B7D6B0;
+  background-image:
+    radial-gradient(
+      #dddddd 0%,
+      #dddddd 29%,
+      #ffffff 31%,
+      #ffffff 100%
+    ),
+    radial-gradient(
+      #dddddd 0%,
+      #dddddd 29%,
+      #ffffff 31%,
+      #ffffff 100%
+    );
+  background-position:
+    left top,
+    right top;
+  background-repeat: repeat-y;
+  background-size: 40px 40px;
+  padding: 1px 41px;
+}
+
+
+.green-bar p {
+  border-color: #dcdfdb;
+  border-style: dashed;
+  border-width: 0 1px;
+  color: #0f0f0f;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0 20px;
+  border-radius: 10px;
+  border: 1px solid #49703D;
+  background-color: #ffffff;
+  background-image: linear-gradient(to bottom,
+    #ffffff 0px,
+    #ffffff 59px,
+    #49703D 60px,
+    #B7D6B0 61px,
+    #B7D6B0 119px,
+    #49703D 120px);
+  background-size: 100% 120px;
+  margin: 10px;
+}
+
+
+
+}*/*/
