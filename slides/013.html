@@ -1,12 +1,59 @@
 <h1>Nesting Tags</h1>
 
-<p>Tags can be combined by nesting
-We have already seen this in a simple case of having <em>styled</em> text and [links] within a paragraph.</p>
+<p>We have already seen in the case of formatting tags, such as having <em>styled</em> text and [links] within a paragraph.
+ tags can be nested within each other.
+  Some elements need to be nesting to work properly.
+</p>
+
+
+<div class="two-column">
+<pre>
+<code>&lt;ol&gt;
+  &lt;li&gt;One&lt;/li&gt;
+  &lt;li&gt;Two&lt;/li&gt;
+  &lt;li&gt;Three&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dog&lt;/li&gt;
+  &lt;li&gt;Goat&lt;/li&gt;
+  &lt;li&gt;Alpaca&lt;/li&gt;
+&lt;/ul&gt;</code>
+</pre>
+</div>
+
+<div class="two-column">
+  <ol>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+  </ol>
+  <ul>
+    <li>Dog</li>
+    <li>Goat</li>
+    <li>Alpaca</li>
+  </ul>
+</div>
 
 <h3>Link (Example)</h3>
+<div class="two-column">
+  <pre><code>
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Cat&quot;&gt;
+  &lt;img src=&#39;https://upload.wikimedia.org/.../Kitty.JPG&#39;&gt;
+  &lt;p&gt;
+    Picture of a cat linked to website
+  &lt;/p&gt;
+&lt;/a&gt;
+</code></pre>
+</div>
 
-<p><a href="http://goo.gl/VlfbZ1">
-  <img width='200' src='https://drpem3xzef3kf.cloudfront.net/photos/pets/30997168/3/?bust=1423712275&amp;width=632&amp;no_scale_up=1'></p>
-
-<p>Picture of a cat linked to website
-</a></p>
+<div class="two-column">
+  <p>
+    <a href="https://en.wikipedia.org/wiki/Cat">
+      <img width='200' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Kittyplya03042006.JPG/320px-Kittyplya03042006.JPG'>
+      <p>
+        Picture of a cat linked to website
+      </p>
+    </a>
+  </p>
+</div>
