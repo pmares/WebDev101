@@ -1,36 +1,59 @@
-<h1>Attribute Example</h1>
+<h1>Nesting Tags</h1>
 
-<h3>Video tag</h3>
-<ul>
-<li><code>&lt;autoplay&gt;</code>: Specifies that the video will start playing as soon as it is ready</li>
-<li><code>&lt;controls&gt;</code>: Specifies that video controls should be displayed (such as a play/pause button etc).</li>
-<li><code>&lt;height&gt;</code>:   Sets the height of the video player</li>
-<li><code>&lt;loop&gt;</code>: Specifies that the video will start over again, every time it is finished</li>
-<li><code>&lt;muted&gt;</code>:    Specifies that the audio output of the video should be muted</li>
-<li><code>&lt;poster&gt;</code>:   Specifies an image to be shown while the video is downloading, or until the user hits the play button</li>
-<li><code>&lt;preload&gt;</code>:  Specifies if and how the author thinks the video should be loaded when the page loads</li>
-<li><code>&lt;src&gt;</code>:  Specifies the URL of the video file</li>
-<li><code>&lt;width&gt;</code>:    Sets the width of the video player</li>
-</ul>
-
-<p>
-You can provide a <strong>drasticly different</strong> experience to your
-end users by being aware of and taking advantage of the many attributes available
+<p>We have already seen in the case of formatting tags, such as having <em>styled</em> text and [links] within a paragraph.
+ tags can be nested within each other.
+  Some elements need to be nesting to work properly.
 </p>
 
-<video
-  src="https://upload.wikimedia.org/wikipedia/commons/3/31/Physicsworks.ogg"
-  type="video/ogg"
-  autoplay
-  muted
-  loop>
 
-  Your browser does not support the video tag.
-</video>
+<div class="two-column">
+<pre>
+<code>&lt;ol&gt;
+  &lt;li&gt;One&lt;/li&gt;
+  &lt;li&gt;Two&lt;/li&gt;
+  &lt;li&gt;Three&lt;/li&gt;
+&lt;/ol&gt;
 
-<video controls
-  src="https://upload.wikimedia.org/wikipedia/commons/3/31/Physicsworks.ogg"
-  poster="https://www.filepicker.io/api/file/eCVM2kufRTCF94LZlN8h"
-  >
-  Your browser does not support the video tag.
-</video>
+&lt;ul&gt;
+  &lt;li&gt;Dog&lt;/li&gt;
+  &lt;li&gt;Goat&lt;/li&gt;
+  &lt;li&gt;Alpaca&lt;/li&gt;
+&lt;/ul&gt;</code>
+</pre>
+</div>
+
+<div class="two-column">
+  <ol>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+  </ol>
+  <ul>
+    <li>Dog</li>
+    <li>Goat</li>
+    <li>Alpaca</li>
+  </ul>
+</div>
+
+<h3>Link (Example)</h3>
+<div class="two-column">
+  <pre><code>
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Cat&quot;&gt;
+  &lt;img src=&#39;https://upload.wikimedia.org/.../Kitty.JPG&#39;&gt;
+  &lt;p&gt;
+    Picture of a cat linked to website
+  &lt;/p&gt;
+&lt;/a&gt;
+</code></pre>
+</div>
+
+<div class="two-column">
+  <p>
+    <a href="https://en.wikipedia.org/wiki/Cat">
+      <img width='200' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Kittyplya03042006.JPG/320px-Kittyplya03042006.JPG'>
+      <p>
+        Picture of a cat linked to website
+      </p>
+    </a>
+  </p>
+</div>

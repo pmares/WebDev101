@@ -1,1 +1,36 @@
-<h1>Slide 19</h1>
+<h1>Attribute Example</h1>
+
+<h3>Video tag</h3>
+<ul>
+<li><code>&lt;autoplay&gt;</code>: Specifies that the video will start playing as soon as it is ready</li>
+<li><code>&lt;controls&gt;</code>: Specifies that video controls should be displayed (such as a play/pause button etc).</li>
+<li><code>&lt;height&gt;</code>:   Sets the height of the video player</li>
+<li><code>&lt;loop&gt;</code>: Specifies that the video will start over again, every time it is finished</li>
+<li><code>&lt;muted&gt;</code>:    Specifies that the audio output of the video should be muted</li>
+<li><code>&lt;poster&gt;</code>:   Specifies an image to be shown while the video is downloading, or until the user hits the play button</li>
+<li><code>&lt;preload&gt;</code>:  Specifies if and how the author thinks the video should be loaded when the page loads</li>
+<li><code>&lt;src&gt;</code>:  Specifies the URL of the video file</li>
+<li><code>&lt;width&gt;</code>:    Sets the width of the video player</li>
+</ul>
+
+<p>
+You can provide a <strong>drasticly different</strong> experience to your
+end users by being aware of and taking advantage of the many attributes available
+</p>
+
+<video
+  src="https://upload.wikimedia.org/wikipedia/commons/3/31/Physicsworks.ogg"
+  type="video/ogg"
+  autoplay
+  muted
+  loop>
+
+  Your browser does not support the video tag.
+</video>
+
+<video controls
+  src="https://upload.wikimedia.org/wikipedia/commons/3/31/Physicsworks.ogg"
+  poster="https://www.filepicker.io/api/file/eCVM2kufRTCF94LZlN8h"
+  >
+  Your browser does not support the video tag.
+</video>
