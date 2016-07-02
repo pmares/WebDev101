@@ -1,0 +1,56 @@
+<h1>Using CSS in your HTML Document</h1>
+
+<h2>Inline Style</h2>
+<div class="two-column">
+  <div>
+      <code>&lt;div
+  style="width:200px;
+    height:200px;
+    background-color:blue;
+    text-align:center;"&gt;
+  Color Example
+&lt;/div&gt;
+    </code>
+  </div>
+
+  <div
+    style="width:200px;height:200px;background-color:lightblue;text-align:center">
+    Color Example
+  </div>
+</div>
+
+<h2>Internal Style Sheet</h2>
+<div class="code two-column">
+    <code>&lt;head&gt;
+  &lt;style&gt;
+    .color-block {
+      width:200px;
+      height:200px;
+      background-color:lightblue;
+      text-align:center;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+  </code>
+
+  <div class="block-color"
+    style="width:200px;height:200px;background-color:lightblue;text-align:center">
+    Color Example
+  </div>
+</div>
+
+<h2>External Style Sheet</h2>
+<div class="two-column">
+  <code>&lt;head&gt;
+  &lt;link rel="stylesheet"
+    type="text/css"
+    href="mystyle.css"&gt;
+&lt;/head&gt;
+
+  </code>
+
+  <div
+    style="width:200px;height:200px;background-color:lightblue;text-align:center">
+    Color Example
+  </div>
+</div>
