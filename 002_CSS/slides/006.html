@@ -1,40 +1,88 @@
-<h1>Selectors</h1>
+<h1>Font Properties</h1>
 
-<p>You tell the browser to apply your CSS to some elements and not others with selectors.</p>
-<div>
-  <h3><code>element</code></h3>
-  <code>div {
-  font-family: Sans-serif;
-}
+<h3>Font Style</h3>
+<ul>
+	<li>normal - The text is shown normally</li>
+	<li>italic - The text is shown in italics</li>
+	<li>oblique - The text is "leaning"
+	(oblique is very similar to italic, but less supported)</li>
+</ul>
 
-&lt;div&gt;
-  Generic Division
-&lt;/div&gt;
-  </code>
+<div class="two-column">
+<code>&lt;span style="font-style: italic;"&gt;
+  Italic Text
+&lt;/span&gt; compared to normal text
+</code>
+  <p>
+    <span style="font-style: italic;">
+      Italic Text
+    </span> compared to normal text
+  </p>
 </div>
 
-<div>
-  <h3><code>#id</code></h3>
-  <code>#my-text {
-  font-align: center;
-}
 
-&lt;div id="my-text"&gt;
-  My Text
-&lt;/div&gt;
+
+<h3>Font Size</h3>
+<ul>
+  <li>Relative - Use <code>em</code> for relative font sizes.  1em = 16 pixels in the default font</li>
+  <li>Absolute - Use <code>px</code> to specify exact font sizes</li>
+</ul>
+
+<div class="two-column">
+  <code>&lt;span style="font-size: 2em;"&gt;
+  2x Larger
+&lt;/span&gt; than normal text
   </code>
+  <p>
+    <span style="font-size: 2em;">
+      2x Larger
+    </span> than normal text
+  </p>
+</div>
 
-  <h3><code>.class</code></h3>
+<div class="two-column">
+<code>&lt;span style="font-size: 20px;"&gt;
+  Exactly 20px
+&lt;/span&gt; compared to normal text
+</code>
+  <p>
+    <span style="font-size: 20px;">
+      Exactly 20px
+    </span> compared to normal text
+  </p>
+</div>
 
-  <code>.blue-box {
-  width: 200px;
-  height: 200px;
-  background-color: light-blue;
-}
+<h3>Font Weight</h3>
+    <ul>
+      <li>Normal</li>
+      <li>Bold</li>
+    </ul>
+    <div class="two-column">
+<code>&lt;span style="font-weight: bold;"&gt;
+  Bold Text
+&lt;/span&gt; compared to normal text
+</code>
+  <p>
+    <span style="font-weight: bold;">
+      Bold Text
+    </span> compared to normal text
+  </p>
+</div>
 
-&lt;div class="blue-box"&gt;
-  Example Box
-&lt;/div&gt;
-  </code>
+<h3>Font Variant</h3>
+<ul>
+  <li>Normal</li>
+  <li>Small Caps</li>
+</ul>
 
+<div class="two-column">
+<code>&lt;span style="font-variant: small-caps;"&gt;
+  Small Caps Font Variant
+&lt;/span&gt; compared to normal text
+</code>
+  <p>
+    <span style="font-variant: small-caps;">
+      Small Caps Font Variant compared to normal text
+    </span>
+  </p>
 </div>
