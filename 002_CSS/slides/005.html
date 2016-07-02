@@ -1,40 +1,55 @@
-<h1>Selectors</h1>
+<h1>Fonts and Text</h1>
 
-<p>You tell the browser to apply your CSS to some elements and not others with selectors.</p>
-<div>
-  <h3><code>element</code></h3>
-  <code>div {
-  font-family: Sans-serif;
+<h2>Default font</h2>
+<p>
+Changing the font on your web side is easy, but there is a small catch.
+Not all computers and browsers have the same fonts.
+In order to support the widest range of browers,
+the font-family property supports "fallback" font names.
+</p>
+<p>
+Using the <code>body</code> element selector will change the font for the entire page
+</p>
+
+<div class="sans-serif">
+  <h2>Sans Serif Font</h2>
+  <code>body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}  </code>
+</div>
+
+<div class="serif">
+  <h2>Serif Font</h2>
+  <code>body {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
-
-&lt;div&gt;
-  Generic Division
-&lt;/div&gt;
   </code>
 </div>
 
-<div>
-  <h3><code>#id</code></h3>
-  <code>#my-text {
-  font-align: center;
+<div class="monospaced">
+  <h2>Monospaced Font</h2>
+  <code>body {
+  font-family: "Lucida Console", Monaco, monospace;
 }
-
-&lt;div id="my-text"&gt;
-  My Text
-&lt;/div&gt;
   </code>
+</div>
 
-  <h3><code>.class</code></h3>
+<div class="center">
+  Visit
+  <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">
+    <img class="logo medium"
+      src="http://www.w3schools.com/html/img_logo.gif"
+      alt="w3schools.com">
+  </a>
+  for a list of web safe font combinations.
+</div>
 
-  <code>.blue-box {
-  width: 200px;
-  height: 200px;
-  background-color: light-blue;
-}
-
-&lt;div class="blue-box"&gt;
-  Example Box
-&lt;/div&gt;
-  </code>
-
+<div class="center">
+  <a target="_blank"
+    href="http://codepen.io/ihpnun/pen/KrmLkg?editors=1100">
+  <img
+    class="logo medium"
+    src="https://blog.codepen.io/wp-content/uploads/2012/06/Black-Large.png"
+    alt="codepen">
+  </a>
 </div>

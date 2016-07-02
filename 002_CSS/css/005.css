@@ -1,0 +1,11 @@
+.sans-serif {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.serif {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.monospaced {
+  font-family: "Lucida Console", Monaco, monospace;
+}
