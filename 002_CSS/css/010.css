@@ -1,0 +1,56 @@
+.margin {
+  margin: auto;
+  background-color: silver;
+  width: 400px;
+  heigth: 200px;
+  padding: 10px 40px 30px 40px;
+  text-align: center;
+  vertical-align: text-top;
+}
+
+.border {
+  background-color: darkseagreen;
+  padding: 10px 40px 30px 40px;
+  margin: 10px 0;
+}
+
+.padding {
+  background-color: silver;
+  padding: 10px 40px 30px 40px;
+  margin: 10px 0;
+}
+
+
+.content {
+  background-color: white;
+  padding: 10px 40px;
+  margin: 10px 0;
+}
+
+.center {
+  margin: auto;
+}
+
+.padding-even {
+  background-color: lightblue;
+  border: solid;
+  padding: 20px;
+}
+
+.padding-wide {
+  background-color: lightblue;
+  border: solid;
+  padding: 10px 60px;
+}
+
+.odd-padding {
+  background-color: lightblue;
+  border: solid;
+  padding: 0 20px 40px 60px;
+}
+
+.padding-content {
+  background-color: white;
+  padding: 10px;
+  margin: 0
+}

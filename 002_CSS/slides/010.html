@@ -1,12 +1,70 @@
 <h1>Margins, Padding, and Borders</h1>
 <p>Margins are the space on the <strong>outsize</strong> of the element</p>
-
 <p>Padding is the space on the <strong>inside</strong> of the element</p>
 
-<p>You can specify the Margins and Padding all the same, in pairs, or individually</p>
+<div class="center">
+  <div class="margin">
+    Margin
+    <div class="border">
+      Border
+      <div class="padding">
+        Padding
+        <div class="content">
+          Content
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<code>.side-pad {
-  margin: 0;
-  padding 0 20px;
+
+<p>You can specify the sizes of the properties in several ways</p>
+<ul>
+  <li> One value for all sides
+    <div class="two-column">
+      <code>.padding-even {
+  padding: 20px;
 }
-</code>
+      </code>
+      <div class="padding-even">
+        <p class="padding-content">Even Padding<p>
+      </div>
+    </div>
+  </li>
+
+
+  <li> Two values, [top & bottom] [left & right]
+    <div class="two-column">
+      <code>.padding-wide {
+  padding: 10px 60px;
+}
+      </code>
+      <div class="padding-wide">
+        <p class="padding-content">Wide Padding<p>
+      </div>
+    </div>
+  </li>
+
+
+  <li> Or specify each side individually
+    <div class="two-column">
+      <code>.odd-padding {
+  padding: 0 20px 40px 60px;
+}
+      </code>
+      <div class="odd-padding">
+        <p class="padding-content">Uneven Padding</p>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<div class="center">
+  <a target="_blank"
+    href="http://codepen.io/ihpnun/pen/zBZgRo?editors=1100">
+  <img
+    class="logo medium"
+    src="https://blog.codepen.io/wp-content/uploads/2012/06/Black-Large.png"
+    alt="codepen">
+  </a>
+</div>
