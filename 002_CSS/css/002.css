@@ -7,3 +7,11 @@
   justify-content: center;
   align-items: center;
 }
+
+.two-column *:nth-child(1) {
+  width: 30%;
+}
+
+.two-column *:nth-child(2) {
+  width: 15%;
+}

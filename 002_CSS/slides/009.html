@@ -1,1 +1,28 @@
 <h1>Specificity</h1>
+
+<p>Multiple CSS declarations can apply to the same HTML element,
+  many times with conflicting styles.  The specificity and order of the CSS
+  declarations determine which are applyed.
+</p>
+
+<p>
+How is it calculated?
+Specificity is a weight that is applied to a given CSS declaration, determined by the number of each selector type in the matching selector. When specificity is equal to any of the multiple declarations, the last declaration found in the CSS is applied to the element. Specificity only applies when the same element is targeted by multiple declarations. As per CSS rules directly targeted element will always take precedence over rules that an element inherits from an ancestor.
+
+Note: Proximity of elements in the document tree has no effect on the specificity.
+
+<p>
+  The following list of selector types is by increasing specificity:
+
+<ol start=0>
+<li> Type selectors (e.g., h1) and pseudo-elements (e.g., :before).</li>
+<li> Class selectors (e.g., .example), attributes selectors (e.g., [type="radio"]) and pseudo-classes (e.g., :hover).</li>
+<li> ID selectors (e.g., #example).</li>
+</ol>
+</p>
+
+More infomation at <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">
+  <img class="logo medium"
+    alt="Mozilla.org"
+    src="https://cdn-images-1.medium.com/max/800/1*v9AT7ZaJc6fR2MjYljGEzg.png">
+</a>

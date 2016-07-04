@@ -1,5 +1,8 @@
 body {
-    background-image: url("http://www.intrawallpaper.com/static/images/VintageBackground.jpg");
-    color: gray;
-    font-size: 2em;
+  background-image: url("http://www.intrawallpaper.com/static/images/VintageBackground.jpg");
+}
+
+#slides {
+  color: gray;
+  font-size: 2em;
 }
