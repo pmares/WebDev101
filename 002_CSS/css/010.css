@@ -52,5 +52,6 @@
 .padding-content {
   background-color: white;
   padding: 10px;
-  margin: 0
+  margin: 0;
+  margin-bottom: 0;
 }
