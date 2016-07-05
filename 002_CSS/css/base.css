@@ -31,6 +31,9 @@ h1 {
   width: 150px;
 }
 
+.logo.large {
+  width: 300px;
+}
 
 nav {
   margin: auto;
