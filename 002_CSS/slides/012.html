@@ -1,8 +1,64 @@
-<h1>Background Images</h1>
+<h1>Float and Clear</h1>
 
-<code>body {
-    background-image:
-      url("http://www.intrawallpaper.com/static/images/VintageBackground.jpg");
-    color: gray;
-}
-</code>
+<h3>float</h3>
+<p>Float is used when you want elements to flow around an element.
+  The most used example is images as seen below</p>
+
+  <p>The first image has no style applied, and is displayed inline<p>
+
+<p style="border:solid;border-size:1px; border-color:gray;padding:15px;">
+Donec a congue elit. Donec sodales dolor quis purus vulputate auctor. Donec ac lacus sed dolor dapibus faucibus ac ut odio. Morbi id felis eu ante cursus faucibus sed vitae dolor.
+<img
+  style="width:200px"
+  src="http://fanny-pictures-site.com/wp-content/uploads/2014/11/the-most-evil-cat-in-the-world_1.jpg">
+   Sed dui turpis, viverra vel quam sit amet, facilisis viverra urna. Phasellus non dolor efficitur, finibus nulla eget, interdum nunc. Integer ultrices enim in semper commodo.
+</p>
+
+<p>This second image has been styled with <code>float:right</code></p>
+
+<div style="border:solid;border-size:1px; border-color:gray;padding:15px;">
+<img style="float:right;width:200px" src="http://www.eastcottvets.co.uk/uploads/Animals/gingerkitten.jpg">
+<p>
+  Aenean blandit, arcu quis vestibulum commodo, ante ante vulputate mi, vel tincidunt nibh nunc sit amet ipsum. Quisque sed semper ante. Suspendisse vulputate, mi vitae feugiat lobortis, odio massa ultrices diam, nec scelerisque lectus risus vitae elit. Vivamus porttitor pulvinar tortor, in porttitor metus dignissim eget. Aenean eget neque in tortor accumsan dapibus vel a ante. Maecenas ac lacus lacinia, blandit nisl eget, lacinia lacus. Curabitur rhoncus est nisi, eget volutpat justo facilisis sed. Quisque aliquam volutpat sapien, eget dictum ex pharetra ut.
+  Pellentesque molestie ut lacus sodales ornare. Quisque non dolor vitae diam elementum lobortis. Quisque porttitor dolor sed nunc auctor fringilla. Vivamus vulputate nunc eget tortor ultricies, a venenatis felis semper. Aliquam tincidunt sit amet ipsum quis vestibulum. Proin quis mollis diam, quis pharetra nulla. Nunc cursus, nibh eu mollis mollis, lorem orci laoreet odio, nec ultricies erat ante at augue. Praesent ultricies, diam maximus euismod tempor, urna nisi varius tortor, nec laoreet justo ante ut sem. Nunc lobortis urna id arcu dignissim ornare.
+</p>
+</div>
+
+<h3>clear</h3>
+<p>Clear is used to prevent an element from wrapping</p>
+<p>Without setting the <code>clear</code> attribute, the footer continues to wrap around the image</p>
+
+<div style="border:solid;border-size:1px; border-color:gray;padding:15px;">
+<img style="float:right;width:200px"
+  src="http://cdn1-www.dogtime.com/assets/uploads/gallery/siberian-husky-dog-breed-pictures/siberian-husky-dog-breed-pictures-2.jpg">
+<p>
+  Aenean blandit, arcu quis vestibulum commodo, ante ante vulputate mi, vel tincidunt nibh nunc sit amet ipsum. Quisque sed semper ante. Suspendisse vulputate, mi vitae feugiat lobortis, odio massa ultrices diam, nec scelerisque lectus risus vitae elit.
+</p>
+</div>
+<div class="center" style="border:solid; border-size:1px; border-color:gray; padding:15px;">
+  <a class="center" href="#">Home</a>
+</div>
+
+<div style="clear:both"></div>
+<br />
+
+<p>With <code>{ clear: both; }</code> set, the footer div behaves normally</p>
+
+<div style="border:solid;border-size:1px; border-color:gray;padding:15px;">
+<img style="float:right;width:200px"
+  src="http://cdn1-www.dogtime.com/assets/uploads/gallery/siberian-husky-dog-breed-pictures/siberian-husky-dog-breed-pictures-2.jpg">
+<p>
+  Aenean blandit, arcu quis vestibulum commodo, ante ante vulputate mi, vel tincidunt nibh nunc sit amet ipsum. Quisque sed semper ante. Suspendisse vulputate, mi vitae feugiat lobortis, odio massa ultrices diam, nec scelerisque lectus risus vitae elit.
+</p>
+</div>
+<div class="center" style="clear: both; border:solid; border-size:1px; border-color:gray; padding:15px;">
+  <a class="center" href="#">Home</a>
+</div>
+
+
+More information at
+<a href="https://css-tricks.com/all-about-floats/">
+  <img src="https://css-tricks.com/wp-content/uploads/2013/06/CSS-Tricks-logo.png"
+    class="logo medium"
+    alt="css-tricks.com">
+</a>
