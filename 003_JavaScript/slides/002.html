@@ -1,0 +1,87 @@
+<h1>Using Javascript in your HTML Document</h1>
+
+<h2>Inline Style</h2>
+<div class="two-column">
+  <div class="container">
+    <header class="filename"><i class="fa fa-file" /> demo1.html</header>
+    <div class="html">
+      <code>&lt;button
+ onclick="window.alert('You got it!')"&gt;
+   Click Me
+&lt;/button&gt;</code>
+    </div>
+  </div>
+
+  <div
+    style="width:200px;height:150px;background-color:lightblue;text-align:center;padding=100px;">
+    <button style="margin:50px;" onclick="window.alert('You got it!')">
+      Click Me
+    </button>
+  </div>
+</div>
+
+<h2>Internal Script Tag</h2>
+<div class="code two-column">
+  <div class="container">
+    <header class="filename"><i class="fa fa-file" /> demo2.html</header>
+    <div class="html">
+      <code>&lt;p id="demo"&gt;
+  A Paragraph
+&lt;/p&gt;
+
+&lt;button onclick="myFunction()"&gt;
+  Click Me
+&lt;/button&gt;
+
+&lt;script&gt;
+  function myFunction() {
+   let element = document.getElementById("demo");
+   element.innerHTML = "Paragraph changed.";
+  }
+&lt;/script&gt;
+      </code>
+    </div>
+  </div>
+
+
+  <div
+    style="width:200px;height:150px;background-color:lightblue;text-align:center;padding:40px 0 0 0;">
+  <p id="demo">A Paragraph</p>
+
+  <button type="button" onclick="myFunction()">Click Me</button>
+
+  <script>
+  function myFunction() {
+    var element = document.getElementById("demo");
+    element.innerHTML = "Paragraph changed.";
+  }
+  </script>
+</div>
+</div>
+
+<h2>External Script</h2>
+<div class="two-column">
+  <div class="container">
+    <header class="filename"><i class="fa fa-file" /> demo3.html</header>
+    <div class="html">
+      <code>&lt;script src="myScript.js"&gt;
+&lt;/script&gt;
+      </code>
+    </div>
+    <header class="filename"><i class="fa fa-file" /> myScript.js</header>
+    <div class="html">
+      <code>function myFunction() {
+ let element = document.getElementById("demo");
+ element.innerHTML = "Paragraph changed.";
+}</code>
+    </div>
+  </div>
+
+  <div
+    style="width:200px;height:150px;background-color:lightblue;text-align:center;padding=100px;">
+    <button style="margin:50px;" onclick="window.alert('You got it!')">
+      Click Me
+    </button>
+  </div>
+
+</div>
