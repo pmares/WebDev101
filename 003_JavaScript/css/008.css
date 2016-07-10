@@ -1,0 +1,7 @@
+#demo-color {
+  background-color:lightgreen;
+}
+
+#demo-color.color-change {
+  background-color:blue;
+}

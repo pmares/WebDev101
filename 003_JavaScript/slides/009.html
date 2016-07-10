@@ -1,0 +1,60 @@
+<h1>Events</h1>
+
+<p>
+HTML events are "things" that happen to HTML elements.
+</p><p>
+When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+</p>
+
+Examples include:
+<ul>
+  <li>moving the mouse over an element</li>
+  <li>clicking on an element</li>
+  <li>changing text in a form</li>
+  <li>loading a page</li>
+</ul>
+
+<br />
+
+
+<div class="code two-column">
+
+  <div class="container">
+    <header class="filename"><i class="fa fa-file" /> demo.html</header>
+    <div class="html">
+      <code>&lt;form&gt;
+  &lt;input id="demo-input"
+    type="text"
+    oninput="myFunction()"&gt;
+  &lt;/input&gt;
+&lt;/form&gt;
+
+&lt;div id="demo-div"&gt;
+&lt;/div&gt;</code>
+    </div>
+
+    <header class="filename"><i class="fa fa-file" /> demo.js</header>
+    <div class="javascript">
+      <code>function myFunction() {
+  var inputElement = document.getElementById("demo-input")
+  var divElement = document.getElementById("demo-div");
+  divElement.innerHTML = inputElement.value;
+}</code>
+    </div>
+  </div>
+
+  <div>
+    <form>
+      <input id="demo9-input" type="text" oninput="myFunction9()"></input>
+    </form>
+    <div id="demo9" style="width:200px;height:150px;text-align:center;background-color:lightblue;padding:40px 0 0 0;">
+    </div>
+    <script>
+    function myFunction9() {
+      var inputElement = document.getElementById("demo9-input")
+      var divElement = document.getElementById("demo9");
+      divElement.innerHTML = inputElement.value;
+    }
+    </script>
+</div>
+</div>

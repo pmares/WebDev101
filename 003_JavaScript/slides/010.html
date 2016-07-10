@@ -1,0 +1,101 @@
+<h1>Context</h1>
+
+<h3>What is <em>this</em></h3>
+
+<p>The Javascript object named <em>"this"</em> is the owner of the code that you are currently running.
+  JavaScript code that is not tied to any other object, class, or element has
+  the context of the browser's Window.
+</p>
+<p>
+  If you open the console in your browser, <em>"this"</em> will return a reference to the <em>Window</em> object
+</p>
+
+
+<p>
+  When an event <em>"fires"</em> the <em>"this"</em> is set to target element, the object that owns the event.
+</p>
+
+<div class="code two-column">
+  <div class="container">
+    <header class="filename"><i class="fa fa-file" /> demo1.html</header>
+    <div class="html">
+      <code>&lt;button onclick="window.console.log(this)"&gt;
+  Click Me
+&lt;/button&gt;</code>
+    </div>
+  </div>
+
+  <div style="width:200px;height:150px;background-color:lightblue;text-align:center;padding:40px 0 0 0;">
+    <button type="button" onclick="window.console.log(this)">Click Me</button>
+  </div>
+</div>
+
+<br />
+
+<div class="code two-column">
+  <div class="container">
+    <header class="filename"><i class="fa fa-file" /> demo2.html</header>
+    <div class="html">
+      <code>&lt;button onclick="myFunction()"&gt;
+  Click Me
+&lt;/button&gt;</code>
+    </div>
+    <header class="filename"><i class="fa fa-file" /> demo2.html</header>
+    <div class="javascript">
+      <code>function myFunction() {
+  window.console.log(this);
+}
+      </code>
+    </div>
+  </div>
+
+  <div style="width:200px;height:150px;background-color:lightblue;text-align:center;padding:40px 0 0 0;">
+    <button type="button" onclick="myFunction10()">Click Me</button>
+    <script>
+    function myFunction10() {
+window.console.log(this);
+}
+    </script>
+  </div>
+</div>
+
+<br />
+
+
+<div class="code two-column">
+  <div class="container">
+    <header class="filename"><i class="fa fa-file" /> demo3.html</header>
+    <div class="html">
+      <code>&lt;button class="this-button"&gt;
+  Click Me
+&lt;/button&gt;</code>
+    </div>
+    <header class="filename"><i class="fa fa-file" /> demo3.html</header>
+    <div class="javascript">
+      <code>function myFunction() {
+  window.console.log(this);
+}
+var element = document.getElementById("this-button");
+element.onclick = myFunction;
+      </code>
+    </div>
+  </div>
+
+  <div style="width:200px;height:150px;background-color:lightblue;text-align:center;padding:40px 0 0 0;">
+    <button type="button" id="this-button">Click Me</button>
+    <script>
+    function myFunction10b() {
+window.console.log(this);
+}
+var element = document.getElementById("this-button");
+element.onclick = myFunction10b;
+    </script>
+  </div>
+</div>
+
+<br />
+
+
+<p>
+An excellent writeup of "this" can be found at <a href="http://www.quirksmode.org/js/this.html">quirksmode.org</a>
+</p>

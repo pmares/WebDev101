@@ -1,0 +1,58 @@
+<h1>Setting / Altering Element Attributes</h1>
+
+<h3>setAttribute</h3>
+
+<div class="code two-column">
+
+  <div class="container">
+    <header class="filename"><i class="fa fa-file" /> demo.html</header>
+    <div class="html">
+      <code>&lt;button onclick="myFunction()"&gt;
+  Click Me
+&lt;/button&gt;</code>
+    </div>
+
+    <header class="filename"><i class="fa fa-file" /> demo.js</header>
+    <div class="javascript">
+      <code>
+function myFunction() {
+  let element = document.getElementById("demo-color");
+
+  if (element.className === 'color-change') {
+    element.setAttribute("class","");
+  } else {
+    element.setAttribute("class","color-change");
+  }
+}</code>
+    </div>
+
+    <header class="filename"><i class="fa fa-file" /> style.css</header>
+    <div class="css">
+      <code>#demo-color {
+  background-color:lightgreen;
+}
+
+#demo-color.color-change {
+  background-color:blue;
+}</code>
+    </div>
+  </div>
+
+
+  <div id="demo-color"
+    style="width:200px;height:150px;text-align:center;padding:40px 0 0 0;">
+
+  <button type="button" onclick="myFunction7()">Click Me</button>
+
+  <script>
+  function myFunction7() {
+    var element = document.getElementById("demo-color");
+    if (element.className === 'color-change') {
+      element.setAttribute("class","");
+    } else {
+      element.setAttribute("class","color-change");
+    }
+  }
+  </script>
+</div>
+</div>
