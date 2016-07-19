@@ -1,0 +1,51 @@
+<h1>Objects</h1>
+
+<p>Objects are a list of zero or more pairs of property names and associated values, enclosed in curly braces ({}).</p>
+
+<code>  var emptyObject = {};
+
+  var book = {
+    title: "JavaScript: The Good Parts",
+    author: "Douglas Crockford",
+    publish_date: "2008-05-08",
+    review_score: 4.3,
+    pages: 172,
+    drm: true
+  };
+</code>
+
+<p>Object properties can be access using the square bracket notation</p>
+<code>  book['author']  // "Douglas Crockford"
+</code>
+
+<p>or using the dot (.) notation</p>
+<code>  book.pages      //  172
+</code>
+
+<p>The values in objects can be any other JavaScript item, including literal values, arrays, functions, and other objects</p>
+
+<code>  var library = {
+    search: function(search_term) {
+      return this.books.find(
+        function(e) {
+          return e.title.includes(search_term);
+        }
+      );
+    },
+    books: [{
+      title: "JavaScript: The Good Parts",
+      author: "Douglas Crockford",
+      publish_date: "2008-05-08",
+      review_score: 4.3,
+      pages: 172,
+      drm: true
+    }, {
+      title: "You Don't Know JS: Up & Going",
+      author: "Kyle Simpson",
+      publish_date: "2015-03-01",
+      review_score: 4.8,
+      pages: 88,
+      drm: false
+    }]
+  };
+</code>

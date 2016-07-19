@@ -1,0 +1,41 @@
+
+<h1>Functions</h1>
+
+<p>A function is a named block of code</p>
+<div class="code two-column">
+  <div class="container">
+    <header class="filename"><i class="fa fa-file" /> demo.html</header>
+    <div class="html">
+      <code>&lt;p id="demo"&gt;
+  A Paragraph
+&lt;/p&gt;
+
+&lt;button onclick="myFunction()"&gt;
+  Click Me
+&lt;/button&gt;</code>
+    </div>
+
+    <header class="filename"><i class="fa fa-file" /> demo.js</header>
+    <div class="javascript">
+      <code>function myFunction() {
+  let element = document.getElementById("demo");
+  element.innerHTML = "Paragraph changed.";
+}
+</code>
+    </div>
+  </div>
+
+  <div style="width:200px;height:150px;background-color:lightblue;text-align:center;padding:40px 0 0 0;">
+    <p id="demo5">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Click Me</button>
+
+    <script type="text/javascript">
+
+    function myFunction() {
+    var element = document.getElementById("demo5");
+    element.innerHTML = "Paragraph changed.";
+    }
+
+    </script>
+  </div>
+</div>
