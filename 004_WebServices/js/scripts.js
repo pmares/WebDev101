@@ -113,4 +113,4 @@ var Slides = {
 };
 
   // All right; let's do this.
-Slides.init(14);
+Slides.init(11);
