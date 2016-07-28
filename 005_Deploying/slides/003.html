@@ -1,0 +1,19 @@
+<h1>Image Processing</h1>
+
+<p>
+Resize, rotate, watermarking
+<<p>
+  http://www.imagemagick.org/script/index.php
+
+<h3>rotate and resize</h3>
+
+
+<h3>Watermark</h3>
+
+  <code>
+    #!/bin/bash
+ convert -size 300x200 xc:none -fill 'rgba(196, 196, 196, 0.4)' \
+          -gravity NorthWest -draw "rotate -25 text 120,120 '© Markerson Acres 2016'" \
+          miff:- |\
+    composite -tile - $1 watermarked_$1
+</code>
