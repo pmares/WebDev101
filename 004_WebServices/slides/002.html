@@ -2,10 +2,10 @@
 
 <h3 class="center">Web Development Class</h3>
 
-<div id="map" style="width:500px;height:300px;background:lightblue;margin:auto;">
+<div id="map002" style="width:500px;height:300px;background:lightblue;margin:auto;">
 </div>
 
-<form class="center" onsubmit="return getDirections();">
+<form id="directions002" class="center">
   <input type="text" name="origin" id="origin11">
   <input type="submit" value="Get Directions">
 </form>
@@ -13,10 +13,10 @@
 <script>
 
 var ourLocation = {lat: 43.372189, lng: -72.338731};
-var map;
+var map002;
 
 function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
+  map002 = new google.maps.Map(document.getElementById('map002'), {
     center: ourLocation,
     scrollwheel: false,
     zoom: 16
@@ -24,13 +24,13 @@ function initMap() {
 
   var marker = new google.maps.Marker({
     position: ourLocation,
-    map: map,
+    map: map002,
     title: 'You are here!'
   });
 }
 
-function getDirections() {
-
+function getDirections(e) {
+  e.preventDefault();
   var origin = document.getElementById("origin11");
   var request = {
     origin: origin.value,
@@ -39,7 +39,7 @@ function getDirections() {
   };
 
   var directionsDisplay = new google.maps.DirectionsRenderer({
-    map: map
+    map: map002
   });
 
   // Pass the directions request to the directions service.
@@ -51,6 +51,9 @@ function getDirections() {
     }
   });
 }
+
+var formDirections = document.getElementById("directions002");
+formDirections.onsubmit = getDirections;
 
 </script>
 
