@@ -2,6 +2,8 @@ a img, a svg {
   vertical-align: middle;
 }
 
+li { margin: 10px 0;}
+
 .clearcss {
   text-align: initial;
 }

@@ -1,0 +1,56 @@
+<h1>Search Engines</h1>
+
+<h3>Index your site</h3>
+<p>Use the following links to have webcrawers index your pages</p>
+<ul>
+  <li><a href="https://www.google.com/webmasters/tools/submit-url?continue=/addurl" target="_blank">Google</a></li>
+  <li><a href="https://support.google.com/webmasters/answer/6066468?hl=en">Fetch as Google for Sites</a>
+  <li><a href="http://www.bing.com/toolbox/submit-site-url">Bing</a></li>
+</ul>
+
+<h3>robots.txt</h3>
+<p>
+The <em>robot.txt</em> file, placed in the document root,
+ tells web crawlers and serach engines which
+parts of your website <strong>not</strong> to index / search.
+Details on the format of the file can be found on
+<a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_txt">Google</a>
+</p>
+
+<div class="container" style="width: 75%;">
+    <header class="filename"><i class="fa fa-file" aria-hidden="true"></i> Example robots.txt</header>
+    <div class="txt" style="background: lightgray; padding: 10px;">
+      <code>User-agent: *
+Disallow: /staff      </code>
+  </div>
+</div>
+
+
+<h3>sitemap.xml</h3>
+<p>
+  An XML encoded sitemap file is a listing of the important content within a
+site, build specifically to help search engines.
+</p>
+
+<div class="container" style="width: 75%;">
+    <header class="filename"><i class="fa fa-file" aria-hidden="true"></i> Example sitemap.xml</header>
+
+    <div class="txt" style="background: lightgray; padding: 10px;">
+
+<code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+  &lt;url&gt;
+    &lt;loc&gt;http://www.example.com/&lt;/loc&gt;
+    &lt;lastmod&gt;2012-04-30&lt;/lastmod&gt;
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+    &lt;priority&gt;1.0&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;http://www.example.com/about-us.html&lt;/loc&gt;
+    &lt;changefreq&gt;yearly&lt;/changefreq&gt;
+    &lt;priority&gt;0.4&lt;/priority&gt;
+  &lt;/url&gt;
+&lt;/urlset&gt;
+</code>
+</div>
+</div>

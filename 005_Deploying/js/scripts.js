@@ -1,3 +1,4 @@
+/* globals $ */
 var Slides = {
   container : $("#slides"),
   totalSlides : 0,
@@ -7,7 +8,9 @@ var Slides = {
 
   init : function(totalSlides) {
 
-    if ( !totalSlides ) throw new Error("Please pass the total number of slides.");
+    if ( !totalSlides ) {
+      throw new Error("Please pass the total number of slides.");
+    }
 
     Slides.totalSlides = totalSlides;
     Slides.loadContent();
@@ -35,7 +38,7 @@ var Slides = {
 
   pad : function(num, size) {
       var s = num+"";
-      while (s.length < size) s = "0" + s;
+      while (s.length < size) { s = "0" + s; }
       return s;
   },
 
@@ -44,8 +47,8 @@ var Slides = {
 
     for ( var i = 1; i <= Slides.totalSlides; i++ ) {
       var slide_number = Slides.pad(i, 3);
-      var slide_file = "slides/" +  slide_number + ".html"
-      var slide = $("<div class="slide" id="slide-" + slide_number + ""></div>")
+      var slide_file = "slides/" +  slide_number + ".html";
+      var slide = $('<div class="slide" id="slide-' + slide_number + '"></div>')
         .load(slide_file);
       slide.appendTo(Slides.container);
       slide.hide();
@@ -69,25 +72,29 @@ var Slides = {
       // if left or right arrow key is pressed
       if ( e.keyCode === 39 || e.keyCode === 37 ) {
         e.preventDefault();
-        ( e.keyCode === 39 ) ? Slides.next() : Slides.prev();
+        if ( e.keyCode === 39 ) {
+          Slides.next();
+        } else {
+          Slides.prev();
+        }
       }
     });
   },
 
   next : function( ) {
-    if ( Slides.currentSlide >= Slides.totalSlides) return;
+    if ( Slides.currentSlide >= Slides.totalSlides) { return; }
     Slides.updateHash( ++Slides.currentSlide );
     Slides.animate();
   },
 
   prev : function() {
-    if ( Slides.currentSlide <= 1 ) return;
+    if ( Slides.currentSlide <= 1 ) { return; }
     Slides.updateHash( --Slides.currentSlide );
     Slides.animate();
   },
 
   animate : function() {
-    $(".slide").hide();
+    $(".slide").hide()
     var slide_number = Slides.pad(Slides.currentSlide, 3);
     this.replaceCSS(slide_number);
     $("#slide-" + slide_number).show();

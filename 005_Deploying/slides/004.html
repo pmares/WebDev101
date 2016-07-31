@@ -1,13 +1,34 @@
-<h1>Code cleanup and Validation</h1>
+<h1>Image Processing</h1>
 
-<h3>HTML</h3>
+<p>
+  <a href="http://www.imagemagick.org" target="_blank">Image Magick<a>
+    is a software suite to create, edit, compose, or convert bitmap images.
+</p>
 
-https://validator.w3.org/
+<p>Original image, upside down, large file size</p>
+<a href="images/Merlin.jpg" target="_blank">
+  <img class="center" src="images/Merlin.jpg" width="400">
+</a>
+<hr>
+<h3>Resize and Rotate Example</h3>
+<code>convert Merlin.jpg \
+  -resize 25% \
+  -auto-orient Merlin.small.jpg
+</code>
+<p>Smaller image is only 4% of original size (reduced from 5.6MB to 0.21MB)</p>
+<a href="images/Merlin.small.jpg" target="_blank">
+  <img class="center" src="images/Merlin.small.jpg" width="400">
+</a>
+<hr>
+<h3>Watermark Example</h3>
+  <code>convert -size 300x200 xc:none \
+  -fill 'rgba(0, 0, 255, 0.8)' \
+  -gravity NorthWest \
+  -draw "rotate -25 text 20,120 'Copyright © 2016 Markerson Acres'" \
+  miff:- | \
+  composite -tile - Merlin.small.jpg Merlin.watermarked.jpg
 
-<JavaScript>
-
-jslint
-????
-
-<h3>CSS</h3>
-csslint
+</code>
+<a href="images/Merlin.watermarked.jpg" target="_blank">
+  <img class="center" src="images/Merlin.watermarked.jpg" width="400">
+</a>
